@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DevIO.App.ViewModels
 {
@@ -23,7 +24,8 @@ namespace DevIO.App.ViewModels
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
         [StringLength(100, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 2)]
         public string Descricao { get; set; }
-
+        [NotMapped]
+        [DisplayName("Imagem do Produto")]
         public IFormFile ImageUpload { get; set; }
         public string Imagem { get; set; }
 
@@ -35,7 +37,7 @@ namespace DevIO.App.ViewModels
         
         [DisplayName("Ativo?")]
         public bool Ativo { get; set; }
-
+        [NotMapped]
         public FornecedorViewModel Fornecedor { get; set; }
         public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
     }
