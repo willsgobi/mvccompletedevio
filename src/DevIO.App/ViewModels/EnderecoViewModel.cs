@@ -15,7 +15,7 @@ namespace DevIO.App.ViewModels
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "O campo {0} precisa estar entre {2} e {1} caracteres.")]
         public string Numero { get; set; }
-        [Required(ErrorMessage = "O campo {0} é obrigatório.")]
+        
         [StringLength(100, MinimumLength = 2, ErrorMessage = "O campo {0} precisa estar entre {2} e {1} caracteres.")]
         public string Complemento { get; set; }
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
